@@ -69,51 +69,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/03/hello-world/" class="article-date">
-  <time datetime="2018-04-03T07:05:48.645Z" itemprop="datePublished">2018-04-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/03/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://dgf1993.cn/2018/04/03/hello-world/" data-id="cjfjcxuwa000014ug26pe066i" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-script标签的属性" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/01/02/script标签的属性/" class="article-date">
@@ -141,8 +96,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>&emsp;&emsp;我们都知道在HTML页面中插入javaScript需要用&lt; script&gt;标签。标签都是有有属性的，script标签有两个属性基本都是很熟悉。一般我们引用都是<code>&lt;script type=&quot;text/javascript&quot; src=&quot;×××.js&quot;&gt;&lt;/script&gt;</code>。其中的type表示编写代码使用的脚本语言的内容类型（也称为<a href="http://www.w3school.com.cn/media/media_mimeref.asp" target="_blank" rel="noopener">MIME类型</a>）这个属性不是必须的，如果没有指定，默认值还是text/javascript。src则是表示要执行代码的外部文件。然而最近发现script标签还有两个以前没有见过的属性</p>
-<h3 id="defer属性"><a href="#defer属性" class="headerlink" title="defer属性"></a>defer属性</h3><p>正常来说script标签应该放在页面的head中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; src=&quot;demo1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; src=&quot;demo2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!--内容--&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<p>这种做法是把所有文件（包括CSS文件和javaScript文件）的引用都放在相同的地方。但是这样有个问题就是由于浏览器是从上到下解析和执行的在解析执行js代码期间会阻塞页面其余部分的渲染，这样会导致页面出现明显的延迟，另外如果引用的js有dom操作时就会发生错误因为那时dom还没生成。所以为了避免这个问题我们一般把javaScript引用放在body后面：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!--内容--&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; src=&quot;demo1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; src=&quot;demo2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="defer属性"><a href="#defer属性" class="headerlink" title="defer属性"></a>defer属性</h3><p>正常来说script标签应该放在页面的head中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/javaScript&quot; src=&quot;demo1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/javaScript&quot; src=&quot;demo2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!--内容--&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这种做法是把所有文件（包括CSS文件和javaScript文件）的引用都放在相同的地方。但是这样有个问题就是由于浏览器是从上到下解析和执行的在解析执行js代码期间会阻塞页面其余部分的渲染，这样会导致页面出现明显的延迟，另外如果引用的js有dom操作时就会发生错误因为那时dom还没生成。所以为了避免这个问题我们一般把javaScript引用放在body后面：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!--内容--&gt;</span><br><span class="line">    &lt;script type=&quot;text/javaScript&quot; src=&quot;demo1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/javaScript&quot; src=&quot;demo2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <p>还有没有别的方法呢，此时就要用到defer属性。这个属性会使相应的js等到页面都解析后再运行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; defer=&quot;defer&quot; src=&quot;demo1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; defer=&quot;defer&quot; src=&quot;demo2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!--内容--&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
 <p>此时虽然script虽然放在了head中，但是这两个js只会先下载并不执行一直会等到浏览器遇到<code>&lt;/html&gt;</code>标签后再执行</p>
@@ -153,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dgf1993.cn/2018/01/02/script标签的属性/" data-id="cjfjcxuxy000d14ugplvbu82s" class="article-share-link">Share</a>
+      <a data-url="http://dgf1993.cn/2018/01/02/script标签的属性/" data-id="cjfjd122r0005wkugxcfmfhfj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">-js</a></li></ul>
@@ -213,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dgf1993.cn/2017/12/28/flex布局/" data-id="cjfjcxuwg000114ugqxaebl4b" class="article-share-link">Share</a>
+      <a data-url="http://dgf1993.cn/2017/12/28/flex布局/" data-id="cjfjd122f0000wkugg20bstwu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">-css</a></li></ul>
@@ -260,7 +215,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dgf1993.cn/2017/12/28/box-sizing/" data-id="cjfjcxuwi000214ug79alzxg9" class="article-share-link">Share</a>
+      <a data-url="http://dgf1993.cn/2017/12/28/box-sizing/" data-id="cjfjd122k0001wkugnpng75wc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">-css</a></li></ul>
@@ -311,7 +266,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dgf1993.cn/2017/12/28/layui使用/" data-id="cjfjcxuxv000b14ugq3chepbf" class="article-share-link">Share</a>
+      <a data-url="http://dgf1993.cn/2017/12/28/layui使用/" data-id="cjfjd122q0004wkugbg32igpc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/框架/">-框架</a></li></ul>
@@ -362,7 +317,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
     </div>
   </div>
 
@@ -373,10 +328,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2018/04/03/hello-world/">Hello World</a>
-          </li>
         
           <li>
             <a href="/2018/01/02/script标签的属性/">script标签的属性</a>
