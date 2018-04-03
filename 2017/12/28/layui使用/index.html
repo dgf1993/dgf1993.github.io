@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>layui使用体会 | DGF&#39;SBLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;emsp;&amp;emsp;最近做后台管理系统。以前都是写前端页面，第一次做后台的页面然后选了Layui框架。从开始做到上线大概花了一周使用时间。现记录下一些使用心得。&amp;emsp;&amp;emsp;Layui使用最详细的还是官方文档。本文仅是使用过程中的一些错误和心得。  table模块后台管理主要是数据的操作，其实大部分是数据库的增删查改只不过一个后台使得这些操作变得简单可视化。layui的table模块">
+<meta name="keywords" content="-框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="layui使用体会">
+<meta property="og:url" content="http://dgf1993.cn/2017/12/28/layui使用/index.html">
+<meta property="og:site_name" content="DGF&#39;SBLOG">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;最近做后台管理系统。以前都是写前端页面，第一次做后台的页面然后选了Layui框架。从开始做到上线大概花了一周使用时间。现记录下一些使用心得。&amp;emsp;&amp;emsp;Layui使用最详细的还是官方文档。本文仅是使用过程中的一些错误和心得。  table模块后台管理主要是数据的操作，其实大部分是数据库的增删查改只不过一个后台使得这些操作变得简单可视化。layui的table模块">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://dgf1993.cn/2017/12/28/layui使用/layui使用/1.jpg">
+<meta property="og:image" content="http://dgf1993.cn/2017/12/28/layui使用/layui使用/2.jpg">
+<meta property="og:updated_time" content="2017-12-30T08:10:03.906Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="layui使用体会">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;最近做后台管理系统。以前都是写前端页面，第一次做后台的页面然后选了Layui框架。从开始做到上线大概花了一周使用时间。现记录下一些使用心得。&amp;emsp;&amp;emsp;Layui使用最详细的还是官方文档。本文仅是使用过程中的一些错误和心得。  table模块后台管理主要是数据的操作，其实大部分是数据库的增删查改只不过一个后台使得这些操作变得简单可视化。layui的table模块">
+<meta name="twitter:image" content="http://dgf1993.cn/2017/12/28/layui使用/layui使用/1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="DGF&#39;SBLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">DGF&#39;SBLOG</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">学习</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://dgf1993.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-layui使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/28/layui使用/" class="article-date">
+  <time datetime="2017-12-28T01:44:44.000Z" itemprop="datePublished">2017-12-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">-前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      layui使用体会
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;&emsp;最近做后台管理系统。以前都是写前端页面，第一次做后台的页面然后选了Layui框架。从开始做到上线大概花了一周使用时间。现记录下一些使用心得。<br>&emsp;&emsp;Layui使用最详细的还是<a href="http://www.layui.com/doc/base/infrastructure.html" target="_blank" rel="noopener">官方文档</a>。本文仅是使用过程中的一些错误和心得。</p>
+<hr>
+<h3 id="table模块"><a href="#table模块" class="headerlink" title="table模块"></a>table模块</h3><p>后台管理主要是数据的操作，其实大部分是数据库的增删查改只不过一个后台使得这些操作变得简单可视化。layui的table模块真的挺好用直接获取到数据然后自动渲染生成表格。如在body里写个table标签：<code>&lt;table id=&quot;demo&quot; lay-filter=&quot;test&quot;&gt;&lt;/table&gt;</code>，然后在script里引入table模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;table模块快速使用&lt;/title&gt;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; href=&quot;/layui/css/layui.css&quot; media=&quot;all&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt; </span><br><span class="line">&lt;table id=&quot;demo&quot; lay-filter=&quot;test&quot;&gt;&lt;/table&gt;</span><br><span class="line">&lt;script src=&quot;/layui/layui.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">layui.use(&apos;table&apos;, function()&#123;</span><br><span class="line">  var table = layui.table;</span><br><span class="line">  table.render(&#123;</span><br><span class="line">    elem: &apos;#demo&apos;</span><br><span class="line">    ,height: 315</span><br><span class="line">    ,url: &apos;/demo/table/user/&apos; //数据接口</span><br><span class="line">    ,page: true //开启分页</span><br><span class="line">    ,cols: [[ //表头</span><br><span class="line">      &#123;field: &apos;id&apos;, title: &apos;ID&apos;, width:80, sort: true, fixed: &apos;left&apos;&#125;</span><br><span class="line">      ,&#123;field: &apos;username&apos;, title: &apos;用户名&apos;, width:80&#125;</span><br><span class="line">      ,&#123;field: &apos;sex&apos;, title: &apos;性别&apos;, width:80, sort: true&#125;</span><br><span class="line">      ,&#123;field: &apos;city&apos;, title: &apos;城市&apos;, width:80&#125; </span><br><span class="line">      ,&#123;field: &apos;sign&apos;, title: &apos;签名&apos;, width: 177&#125;</span><br><span class="line">      ,&#123;field: &apos;experience&apos;, title: &apos;积分&apos;, width: 80, sort: true&#125;</span><br><span class="line">      ,&#123;field: &apos;score&apos;, title: &apos;评分&apos;, width: 80, sort: true&#125;</span><br><span class="line">      ,&#123;field: &apos;classify&apos;, title: &apos;职业&apos;, width: 80&#125;</span><br><span class="line">      ,&#123;field: &apos;wealth&apos;, title: &apos;财富&apos;, width: 135, sort: true&#125;</span><br><span class="line">    ]]</span><br><span class="line">  &#125;);  </span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>然后layui就可以自动生成表格:<img src="layui使用/1.jpg" alt=""><br>但是有一点需要注意的是后台传输的数据有一定的格式，如果格式错误就会报接口异常的错误，具体的<a href="http://www.layui.com/demo/table/user/?page=1&amp;limit=30" target="_blank" rel="noopener">数据格式</a></p>
+<hr>
+<h3 id="form模块"><a href="#form模块" class="headerlink" title="form模块"></a>form模块</h3><p>同样的引入layui的form模块就可以使用表单功能<img src="layui使用/2.jpg" alt=""><br>layui表单自带更新渲染，各种监听及表单验证功能，具体可以看<a href="http://www.layui.com/doc/modules/form.html" target="_blank" rel="noopener">官方文档</a>。过程中遇到的一个问题就是有些时候表单元素是动态插入的而layui是一加载页面就自动化渲染。所以当在做几个联动的下拉菜单时本地好好的结果放服务器上确没有数据最后才发现ajax加载数据是异步需要时间本地比较快放网上后数据还没生成layui就直接渲染了。这时重新渲染就比较重要了，方法：<code>form.render(type, filter)</code></p>
+<hr>
+<h3 id="layer模块"><a href="#layer模块" class="headerlink" title="layer模块"></a>layer模块</h3><p>layui很重要的一个功能就是它的弹出层模块了，简洁漂亮而且功能强大。印象最深的就是弹出一个iframe层然后在主页面里可以获取到ifram层所有html节点和对象方法。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dgf1993.cn/2017/12/28/layui使用/" data-id="cjfjcxuxv000b14ugq3chepbf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/框架/">-框架</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/28/box-sizing/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CSS中的box-sizing属性
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">-前端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">-css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">-js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">-框架</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/css/" style="font-size: 20px;">-css</a> <a href="/tags/js/" style="font-size: 10px;">-js</a> <a href="/tags/框架/" style="font-size: 10px;">-框架</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/03/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/02/script标签的属性/">script标签的属性</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/28/flex布局/">flex布局</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/28/box-sizing/">CSS中的box-sizing属性</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/28/layui使用/">layui使用体会</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 董光飞<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

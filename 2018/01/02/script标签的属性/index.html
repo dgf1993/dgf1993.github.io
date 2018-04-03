@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>script标签的属性 | DGF&#39;SBLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;emsp;&amp;emsp;我们都知道在HTML页面中插入javaScript需要用&amp;lt; script&amp;gt;标签。标签都是有有属性的，script标签有两个属性基本都是很熟悉。一般我们引用都是&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;×××.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;。其中的type表示编写代码使用的脚">
+<meta name="keywords" content="-js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="script标签的属性">
+<meta property="og:url" content="http://dgf1993.cn/2018/01/02/script标签的属性/index.html">
+<meta property="og:site_name" content="DGF&#39;SBLOG">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;我们都知道在HTML页面中插入javaScript需要用&amp;lt; script&amp;gt;标签。标签都是有有属性的，script标签有两个属性基本都是很熟悉。一般我们引用都是&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;×××.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;。其中的type表示编写代码使用的脚">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-02T08:49:17.100Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="script标签的属性">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;我们都知道在HTML页面中插入javaScript需要用&amp;lt; script&amp;gt;标签。标签都是有有属性的，script标签有两个属性基本都是很熟悉。一般我们引用都是&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;×××.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;。其中的type表示编写代码使用的脚">
+  
+    <link rel="alternate" href="/atom.xml" title="DGF&#39;SBLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">DGF&#39;SBLOG</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">学习</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://dgf1993.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-script标签的属性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/02/script标签的属性/" class="article-date">
+  <time datetime="2018-01-02T07:01:51.000Z" itemprop="datePublished">2018-01-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">-前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      script标签的属性
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;&emsp;我们都知道在HTML页面中插入javaScript需要用&lt; script&gt;标签。标签都是有有属性的，script标签有两个属性基本都是很熟悉。一般我们引用都是<code>&lt;script type=&quot;text/javascript&quot; src=&quot;×××.js&quot;&gt;&lt;/script&gt;</code>。其中的type表示编写代码使用的脚本语言的内容类型（也称为<a href="http://www.w3school.com.cn/media/media_mimeref.asp" target="_blank" rel="noopener">MIME类型</a>）这个属性不是必须的，如果没有指定，默认值还是text/javascript。src则是表示要执行代码的外部文件。然而最近发现script标签还有两个以前没有见过的属性</p>
+<h3 id="defer属性"><a href="#defer属性" class="headerlink" title="defer属性"></a>defer属性</h3><p>正常来说script标签应该放在页面的head中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; src=&quot;demo1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; src=&quot;demo2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!--内容--&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这种做法是把所有文件（包括CSS文件和javaScript文件）的引用都放在相同的地方。但是这样有个问题就是由于浏览器是从上到下解析和执行的在解析执行js代码期间会阻塞页面其余部分的渲染，这样会导致页面出现明显的延迟，另外如果引用的js有dom操作时就会发生错误因为那时dom还没生成。所以为了避免这个问题我们一般把javaScript引用放在body后面：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!--内容--&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; src=&quot;demo1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; src=&quot;demo2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>还有没有别的方法呢，此时就要用到defer属性。这个属性会使相应的js等到页面都解析后再运行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; defer=&quot;defer&quot; src=&quot;demo1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; defer=&quot;defer&quot; src=&quot;demo2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!--内容--&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>此时虽然script虽然放在了head中，但是这两个js只会先下载并不执行一直会等到浏览器遇到<code>&lt;/html&gt;</code>标签后再执行</p>
+<h3 id="async属性"><a href="#async属性" class="headerlink" title="async属性"></a>async属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; async src=&quot;demo1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/html&quot; async src=&quot;demo2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!--内容--&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>正常来说浏览器解析是按照从上往下依次一步步解析的，有了async就可以使后续文档的加载和渲染与js脚本的加载和执行并行进行，即异步执行。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>1.defer和async都是异步加载。<br>2.defer在页面渲染完后才会执行，而async加载完就会且一定在页面的load事件前执行。<br>3.defer的js会按照加载的顺序先后执行，而async由于加载和执行是紧紧挨着的，无论声明顺序如何只要加载完成就立刻执行。如demo2.js在demo1.js后但如果demo2.js比较小先下载完毕则demo2.js就会先执行</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dgf1993.cn/2018/01/02/script标签的属性/" data-id="cjfjcxuxy000d14ugplvbu82s" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">-js</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/04/03/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/28/flex布局/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">flex布局</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">-前端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">-css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">-js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">-框架</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/css/" style="font-size: 20px;">-css</a> <a href="/tags/js/" style="font-size: 10px;">-js</a> <a href="/tags/框架/" style="font-size: 10px;">-框架</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/03/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/02/script标签的属性/">script标签的属性</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/28/flex布局/">flex布局</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/28/box-sizing/">CSS中的box-sizing属性</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/28/layui使用/">layui使用体会</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 董光飞<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
