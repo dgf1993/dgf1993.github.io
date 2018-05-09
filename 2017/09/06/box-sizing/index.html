@@ -89,15 +89,15 @@
 <meta property="og:site_name" content="DGF&#39;SBLOG">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;在学习css盒子模型布局的时候经常会遇到给一个div设置了宽高，然后再加padding发现宽高变了,而许多情况下由于根据psd图写页面量好的宽高是希望不变的。比如：我们给一个class为demo的div给了如下的css样式.demo{width: 200px;height: 200px;background-color: red;},在浏览器打开可以很清楚的看到这个div高">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://dgf1993.cn/2017/09/06/box-sizing/box-sizing/1.jpg">
-<meta property="og:image" content="http://dgf1993.cn/2017/09/06/box-sizing/box-sizing/2.jpg">
-<meta property="og:image" content="http://dgf1993.cn/2017/09/06/box-sizing/box-sizing/4.jpg">
-<meta property="og:image" content="http://dgf1993.cn/2017/09/06/box-sizing/box-sizing/5.jpg">
+<meta property="og:image" content="http://dgf1993.cn/2017/09/06/box-sizing/1.jpg">
+<meta property="og:image" content="http://dgf1993.cn/2017/09/06/box-sizing/2.jpg">
+<meta property="og:image" content="http://dgf1993.cn/2017/09/06/box-sizing/4.jpg">
+<meta property="og:image" content="http://dgf1993.cn/2017/09/06/box-sizing/5.jpg">
 <meta property="og:updated_time" content="2018-05-09T09:30:33.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS中的box-sizing属性">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;在学习css盒子模型布局的时候经常会遇到给一个div设置了宽高，然后再加padding发现宽高变了,而许多情况下由于根据psd图写页面量好的宽高是希望不变的。比如：我们给一个class为demo的div给了如下的css样式.demo{width: 200px;height: 200px;background-color: red;},在浏览器打开可以很清楚的看到这个div高">
-<meta name="twitter:image" content="http://dgf1993.cn/2017/09/06/box-sizing/box-sizing/1.jpg">
+<meta name="twitter:image" content="http://dgf1993.cn/2017/09/06/box-sizing/1.jpg">
 
 
 
@@ -358,11 +358,11 @@
       
 
       
-        <p>&emsp;&emsp;在学习css盒子模型布局的时候经常会遇到给一个div设置了宽高，然后再加padding发现宽高变了,而许多情况下由于根据psd图写页面量好的宽高是希望不变的。比如：我们给一个class为demo的div给了如下的css样式<code>.demo{width: 200px;height: 200px;background-color: red;}</code>,在浏览器打开可以很清楚的看到这个div高200px，宽200px,背景为红色:<img src="box-sizing/1.jpg" alt="">,然后我们加了个padding<code>.demo{width: 200px;height: 200px;background-color: red;padding:10px;}</code>此时：<img src="box-sizing/2.jpg" alt=""><br>宽高变成了220px。也就是尽管我们指定了这个div的宽高但是给了padding后真实的宽高却变了。怎么样才能只要给了宽高宽高就永远不变呢？这就要用到box-sizing属性。</p>
+        <p>&emsp;&emsp;在学习css盒子模型布局的时候经常会遇到给一个div设置了宽高，然后再加padding发现宽高变了,而许多情况下由于根据psd图写页面量好的宽高是希望不变的。比如：我们给一个class为demo的div给了如下的css样式<code>.demo{width: 200px;height: 200px;background-color: red;}</code>,在浏览器打开可以很清楚的看到这个div高200px，宽200px,背景为红色:<img src="/2017/09/06/box-sizing/1.jpg" alt="">,然后我们加了个padding<code>.demo{width: 200px;height: 200px;background-color: red;padding:10px;}</code>此时：<img src="/2017/09/06/box-sizing/2.jpg" alt=""><br>宽高变成了220px。也就是尽管我们指定了这个div的宽高但是给了padding后真实的宽高却变了。怎么样才能只要给了宽高宽高就永远不变呢？这就要用到box-sizing属性。</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p><code>box-sizing: content-box|border-box|inherit;</code></p>
-<h3 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h3><p><img src="box-sizing/4.jpg" alt=""></p>
+<h3 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h3><p><img src="/2017/09/06/box-sizing/4.jpg" alt=""></p>
 <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>我们都知道盒子模型从内到外是由content(内容)，padding(内边距)，border(边框)，margin(外边距)组成的。box-sizing一共有三个取值，inherit是继承父盒子的属性不做讨论。主要说说content-box和border-box,顾名思义content-box翻译下就叫内容盒子，它所认为的宽高只是内容的宽高，border和padding都不考虑在内，给个<code>width:100px</code>这个宽在它看来就是内容的宽所以再加padding的时候实际的宽就会增加。而border-box翻译过来叫边框盒子，它认为的宽高就直接扩到边框了，同样给个<code>width:100px</code>在它看来就是边框以内的宽高，所以包含了padding，即content+padding=100px,如果再给个padding实际的宽还是100px，只不过padding增加了根据等式content就变小了。</p>
-<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>现在我们将前面的div的css中加个<code>box-sizing:border-box</code>,即<code>.demo{width: 200px;height: 200px;background-color: red;box-sizing:border-box}</code>,然后打开浏览器：<br><img src="box-sizing/5.jpg" alt=""><br>可以看到宽高确实是200px。</p>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>现在我们将前面的div的css中加个<code>box-sizing:border-box</code>,即<code>.demo{width: 200px;height: 200px;background-color: red;box-sizing:border-box}</code>,然后打开浏览器：<br><img src="/2017/09/06/box-sizing/5.jpg" alt=""><br>可以看到宽高确实是200px。</p>
 
       
     </div>
